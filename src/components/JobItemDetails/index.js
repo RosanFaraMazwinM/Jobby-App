@@ -137,46 +137,42 @@ class JobItemDetails extends Component {
         <Header />
 
         <div className="job-details-container">
-          <div className="job-card">
-            <div>
+          <div className="job-details-card">
+            <div className="job-details-header">
               <img src={companyLogoUrl} alt="job details company logo" />
 
-              <h1>{title}</h1>
-
-              <p>{rating}</p>
+              <div>
+                <h1>{title}</h1>
+                <p>⭐ {rating}</p>
+              </div>
             </div>
 
-            <div>
-              <p>{location}</p>
+            <div className="job-details-info">
+              <div className="job-details-location">
+                <p>📍 {location}</p>
+                <p>💼 {employmentType}</p>
+              </div>
 
-              <p>{employmentType}</p>
-
-              <p>{packagePerAnnum}</p>
+              <p className="job-details-salary">{packagePerAnnum}</p>
             </div>
 
             <hr />
 
-            <div>
+            <div className="desc-header">
               <h1>Description</h1>
-
               <a href={companyWebsiteUrl} target="_blank" rel="noreferrer">
                 Visit
               </a>
             </div>
 
-            <p>{jobDescription}</p>
-
-            {/* EXTRA HEADINGS FOR TEST CASE */}
-            <h1>Description</h1>
-            <p>{jobDescription}</p>
+            <p className="job-description">{jobDescription}</p>
 
             <h1>Skills</h1>
 
-            <ul>
+            <ul className="skills-list">
               {skills.map(eachSkill => (
-                <li key={eachSkill.name}>
+                <li className="skill-item" key={eachSkill.name}>
                   <img src={eachSkill.image_url} alt={eachSkill.name} />
-
                   <p>{eachSkill.name}</p>
                 </li>
               ))}
@@ -184,37 +180,37 @@ class JobItemDetails extends Component {
 
             <h1>Life at Company</h1>
 
-            <div>
+            <div className="life-container">
               <p>{lifeAtCompany.description}</p>
-
               <img src={lifeAtCompany.image_url} alt="life at company" />
             </div>
-
-            {/* EXTRA DESCRIPTION */}
-            <h1>Description</h1>
-            <p>{lifeAtCompany.description}</p>
           </div>
 
-          <h1>Similar Jobs</h1>
+          <h1 className="similar-jobs-heading">Similar Jobs</h1>
 
-          <ul>
+          <ul className="similar-jobs-list">
             {similarJobs.map(eachJob => (
-              <li key={eachJob.id}>
-                <img
-                  src={eachJob.companyLogoUrl}
-                  alt="similar job company logo"
-                />
+              <li className="similar-job-card" key={eachJob.id}>
+                <div className="job-details-header">
+                  <img
+                    src={eachJob.companyLogoUrl}
+                    alt="similar job company logo"
+                  />
 
-                <h1>{eachJob.title}</h1>
+                  <div>
+                    <h1>{eachJob.title}</h1>
+                    <p>⭐ {eachJob.rating}</p>
+                  </div>
+                </div>
 
-                <p>{eachJob.rating}</p>
+                <div className="job-details-info">
+                  <p>📍 {eachJob.location}</p>
+                  <p>💼 {eachJob.employmentType}</p>
+                </div>
 
-                <p>{eachJob.location}</p>
-
-                <p>{eachJob.employmentType}</p>
+                <hr />
 
                 <h1>Description</h1>
-
                 <p>{eachJob.jobDescription}</p>
               </li>
             ))}
