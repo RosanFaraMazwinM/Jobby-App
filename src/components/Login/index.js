@@ -45,48 +45,48 @@ class Login extends Component {
     const jwtToken = Cookies.get('jwt_token')
 
     if (jwtToken !== undefined) {
-      return <Redirect to='/' />
+      return <Redirect to="/" />
     }
 
     return (
-      <div className='bg-container'>
-        <form className='card-container' onSubmit={this.onSubmitForm}>
+      <div className="bg-container">
+        <form className="card-container" onSubmit={this.onSubmitForm}>
           <img
-            src='https://assets.ccbp.in/frontend/react-js/logo-img.png'
-            className='logo'
-            alt='website logo'
+            src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+            className="logo"
+            alt="website logo"
           />
           <br />
-          <label htmlFor='name' className='name'>
+          <label htmlFor="name" className="name">
             USERNAME
           </label>
           <br />
           <input
-            type='text'
-            className='box'
-            id='name'
-            placeholder='Username'
+            type="text"
+            className="box"
+            id="name"
+            placeholder="Username"
             value={username}
             onChange={this.onChangeUsername}
           />
           <br />
-          <label htmlFor='pass' className='pass'>
+          <label htmlFor="pass" className="pass">
             PASSWORD
           </label>
           <br />
           <input
-            type='password'
-            className='box'
-            id='pass'
-            placeholder='Password'
+            type="password"
+            className="box"
+            id="pass"
+            placeholder="Password"
             value={password}
             onChange={this.onChangePassword}
           />
           <br />
-          <button className='btn' type='submit'>
+          <button className="btn" type="submit">
             Login
           </button>
-          {showError && <p className='error'>*{errorMsg}</p>}
+          {showError && <p className="error">*{errorMsg}</p>}
         </form>
       </div>
     )

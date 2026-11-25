@@ -40,3 +40,9 @@
   border-radius: 5px;
   margin-left: 30px;
 }
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
