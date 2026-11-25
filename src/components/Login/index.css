@@ -1,0 +1,58 @@
+.bg-container {
+  background-color: #000000 !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+  background-color: #2c364c;
+  height: 350px;
+  width: 400px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: shadow;
+}
+.logo {
+  height: 30px;
+  width: 120px;
+  margin-bottom: 20px;
+}
+.name,
+.pass {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.box {
+  border: 1px solid #b6c5ff;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.btn {
+  background-color: #6366f1;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: 'Roboto';
+  padding: 10px;
+  border-radius: 5px;
+  justify-content: flex-end;
+  width: 180px;
+  margin-left: 30px;
+  border: 0px;
+  margin-bottom: 50px;
+}
+.error {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #ff0b37;
+  margin-left: 30px;
+}

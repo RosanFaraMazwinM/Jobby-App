@@ -1,0 +1,77 @@
+.job-details-container {
+  background-color: #121212;
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff;
+}
+
+.job-card {
+  background-color: #272727;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* TOP */
+.job-header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.job-header img {
+  width: 60px;
+}
+
+/* INFO */
+.job-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.salary {
+  font-weight: bold;
+}
+
+/* DESCRIPTION HEADER */
+.desc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desc-header a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+/* SKILLS */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-item img {
+  width: 40px;
+}
+
+/* LIFE */
+.life-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.life-container img {
+  width: 40%;
+  border-radius: 10px;
+}
